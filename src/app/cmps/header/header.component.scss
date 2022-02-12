@@ -1,0 +1,30 @@
+header {
+  height: 60px;
+  background-color: rgb(168, 60, 69);
+  box-shadow: -1px 1px 6px 0px #343434;
+  margin-bottom: 20px;
+
+  a {
+    color: #fff;
+  }
+  div {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 450px) {
+      flex-direction: column;
+      padding: 5px;
+    }
+    nav {
+      display: flex;
+      gap: 10px;
+      @media (max-width: 450px) {
+        font-size: 15px;
+      }
+    }
+  }
+  img {
+    width: 20px;
+  }
+}

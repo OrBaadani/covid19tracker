@@ -1,0 +1,7 @@
+<section class="case-list">
+  <app-case-preview
+    (onRemove)="onRemove.emit($event)"
+    *ngFor="let case of cases"
+    [case]="case"
+  ></app-case-preview>
+</section>

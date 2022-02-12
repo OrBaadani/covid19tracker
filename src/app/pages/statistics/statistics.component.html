@@ -1,0 +1,99 @@
+<section class="statistics">
+  <section *ngIf="worldData" class="world-wide">
+    <h1>World Wide</h1>
+    <section class="world-data-container">
+      <app-pie-chart
+        class="pie-chart-cmp"
+        *ngIf="worldDataChart.length"
+        [worldData]="worldDataChart"
+      ></app-pie-chart>
+
+      <section class="boxes">
+        <div>
+          <p>
+            New Cases <span>{{ worldData.NewCases }}</span>
+          </p>
+        </div>
+        <div>
+          <p>
+            New Deaths
+            <span>{{ worldData.NewDeaths }}</span>
+          </p>
+        </div>
+        <div>
+          <p>
+            New Recovered <span>{{ worldData.NewRecovered }}</span>
+          </p>
+        </div>
+        <div>
+          <p>
+            Critical <span>{{ worldData.Serious_Critical }}</span>
+          </p>
+        </div>
+        <div>
+          <p>
+            Case Fatality Rate<span>{{ worldData.Case_Fatality_Rate }}</span>
+          </p>
+        </div>
+      </section>
+    </section>
+  </section>
+
+  <section class="country-data">
+    <h1 *ngIf="countryData">
+      By country:
+      <select
+        *ngIf="countries"
+        [(ngModel)]="country"
+        name="country"
+        id=""
+        (change)="startRequest($event.target.value)"
+      >
+        <option *ngFor="let con of countries" value="{{ con.code }}">
+          {{ con.name }}
+        </option></select
+      ><img [src]="countryData.countryInfo.flag" alt="" />
+      <!-- {{
+        countryData.country
+      }} -->
+    </h1>
+
+    <app-line-chart
+      *ngIf="chartDates && chartLine1 && chartLine2 && chartLine3"
+      [chartLine2]="chartLine2"
+      [chartLine1]="chartLine1"
+      [chartDates]="chartDates"
+      [chartLine3]="chartLine3"
+    ></app-line-chart>
+    <section>
+      <!-- <pre *ngIf="countryData">{{countryData|json}}</pre> -->
+      <div class="country-data-container" *ngIf="countryData">
+        <div>
+          <p>
+            Today Cases <span> {{ countryData.todayCases }} </span>
+          </p>
+        </div>
+        <div>
+          <p>
+            Active Cases <span>{{ countryData.active }}</span>
+          </p>
+        </div>
+        <div>
+          <p>
+            Critical <span>{{ countryData.critical }}</span>
+          </p>
+        </div>
+        <div>
+          <p>
+            Total Cases <span>{{ countryData.cases }}</span>
+          </p>
+        </div>
+        <div>
+          <p>
+            Total recoverd <span> {{ countryData.recovered }}</span>
+          </p>
+        </div>
+      </div>
+    </section>
+  </section>
+</section>

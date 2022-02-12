@@ -1,0 +1,36 @@
+<section *ngIf="case" class="case-edit">
+  <div class="overlay" (click)="closeModal($event)">
+    <div class="modal" (click)="$event.stopPropagation()">
+      <h1 *ngIf="!case._id">Add a new case</h1>
+      <h1 *ngIf="case._id">Edit case</h1>
+      <form (ngSubmit)="onSaveCase()">
+        <div>
+          <label for="name">Name</label>
+          <input [(ngModel)]="case.name" type="text" name="name" id="name" />
+        </div>
+
+        <div>
+          <label for="age">Age</label>
+          <input [(ngModel)]="case.age" type="number" name="age" id="age" />
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input [(ngModel)]="case.phone" type="text" name="phone" id="phone" />
+        </div>
+        <div>
+          <label for="status">Status</label>
+          <select name="status" id="" ([ngModel])="(case.status)">
+            <option value="recovered">Recovered</option>
+            <option value="infected">Infected</option>
+            <option value="dead">Dead</option>
+          </select>
+        </div>
+
+        <!-- <label for="birthDate">Birth Date</label>
+        <input [ngModel]="case.birthDate|date:'yyyy-MM-dd'" (ngModelChange)="case.birthDate = $event" type="date" name="birthDate" id="birthDate"> -->
+
+        <button>Save</button>
+      </form>
+    </div>
+  </div>
+</section>

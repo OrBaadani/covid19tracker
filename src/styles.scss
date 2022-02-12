@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto;
+  background-color: rgb(214, 214, 214);
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+p {
+  margin: 5px 0;
+}
+button {
+  font-family: Roboto;
+  border: none;
+  background-color: rgb(241, 205, 205);
+  &:hover {
+    background-color: rgb(199, 146, 146);
+  }
+}
+@font-face {
+  font-family: Roboto;
+  src: url(./assets/fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "fa-solid";
+  src: url(./assets/fonts/fa-solid-900.ttf);
+}
+@font-face {
+  font-family: Rowdies;
+  src: url(./assets/fonts/Rowdies-Regular.ttf);
+}
+.container {
+  margin: 0 50px;
+  @media (max-width: 490px) {
+    margin: 0 7px;
+  }
+}

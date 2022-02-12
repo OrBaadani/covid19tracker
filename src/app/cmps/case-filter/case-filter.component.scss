@@ -1,0 +1,15 @@
+.case-filter {
+  width: 100%;
+  @media (max-width: 450px) {
+    font-size: 14px;
+  }
+  select {
+    padding: 5px 8px;
+    @media (max-width: 450px) {
+      width: 100px;
+    }
+    option {
+      padding: 5px 8px;
+    }
+  }
+}

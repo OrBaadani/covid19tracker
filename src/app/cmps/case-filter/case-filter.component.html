@@ -1,0 +1,15 @@
+<section class="case-filter">
+  Filter By Status:
+
+  <select
+    [(ngModel)]="filterBy.term"
+    (ngModelChange)="onSetFilter.emit(filterBy)"
+    name="term"
+    id=""
+  >
+    <option value="" selected>All</option>
+    <option value="recovered">Recovered</option>
+    <option value="active">Active</option>
+    <option value="dead">Dead</option>
+  </select>
+</section>

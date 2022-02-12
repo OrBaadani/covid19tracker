@@ -1,0 +1,52 @@
+.case-edit {
+  height: 100%;
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.308);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    .modal {
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #fff;
+      width: 300px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      h1 {
+        padding-bottom: 10px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        label {
+          font-size: 14px;
+        }
+        input {
+          // line-height: 1.5rem;
+          border: 1px solid rgb(109, 109, 109);
+          padding: 5px 8px;
+        }
+        select {
+          border: 1px solid rgb(109, 109, 109);
+          padding: 5px 8px;
+        }
+        button {
+          padding: 5px 8px;
+          font-size: 16px;
+          border-radius: 4px;
+          align-self: center;
+          font-weight: 900;
+        }
+        div {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<section class="case-details" *ngIf="covidCase">
+  <img src="https://robohash.org/{{ covidCase._id }}?set=set5" alt="" />
+
+  <p>{{ covidCase.name }}</p>
+  <p>{{ covidCase.age }}</p>
+  <p>{{ covidCase.phone }}</p>
+  <p>{{ covidCase.status }}</p>
+
+  <button (click)="onBack()">Back</button>
+</section>

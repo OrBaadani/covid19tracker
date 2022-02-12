@@ -1,0 +1,11 @@
+<section [routerLink]="case._id" class="case-preview">
+  <img src="https://robohash.org/{{ case._id }}?set=set5" alt="" />
+  <section class="info">
+    <p>Name: {{ case.name }}</p>
+    <p>Status: {{ case.status }}</p>
+  </section>
+  <section (click)="$event.stopPropagation()" class="actions">
+    <a [routerLink]="['edit', case._id]"></a>
+    <button (click)="onRemove.emit(case._id)" class="remove-btn"></button>
+  </section>
+</section>

@@ -1,0 +1,12 @@
+<section class="case-page">
+  <div>
+    <app-case-filter (onSetFilter)="onFilter($event)"></app-case-filter>
+    <a routerLink="edit"></a>
+  </div>
+
+  <app-case-list
+    (onRemove)="onRemoveCase($event)"
+    [cases]="cases$ | async"
+  ></app-case-list>
+  <router-outlet></router-outlet>
+</section>
