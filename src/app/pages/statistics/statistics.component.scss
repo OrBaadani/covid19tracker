@@ -26,10 +26,13 @@
   .world-wide {
     display: flex;
     flex-direction: column;
+    // padding-bottom: 20px;
+    margin-bottom: 20px;
+
     gap: 20px;
-    @media (max-width: 1050px) {
-      margin-bottom: 20px;
-    }
+    // @media (max-width: 1050px) {
+    //   margin-bottom: 20px;
+    // }
     .world-data-container {
       display: flex;
       gap: 20px;
@@ -66,6 +69,7 @@
     section {
       flex-grow: 1;
       .country-data-container {
+        height: 100%;
         display: flex;
         gap: 20px;
         @media (max-width: 450px) {
