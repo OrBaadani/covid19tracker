@@ -18,21 +18,21 @@ const CASES = [
     name: 'Hallie Mclean',
     age: 72,
     phone: '+1 (948) 464-2888',
-    status: 'active',
+    status: 'Active',
   },
   {
     _id: '5a56640252d6acddd183d319',
     name: 'Parsons Norris',
     age: 61,
     phone: '+1 (958) 502-3495',
-    status: 'active',
+    status: 'Active',
   },
   {
     _id: '5a566402ed1cf349f0b47b4d',
     name: 'Rachel Lowe',
     age: 40,
     phone: '+1 (911) 475-2312',
-    status: 'critical',
+    status: 'Active',
   },
   {
     _id: '5a566402abce24c6bfe4699d',
@@ -46,7 +46,7 @@ const CASES = [
     name: 'Shana Pope',
     age: 19,
     phone: '+1 (970) 527-3082',
-    status: 'active',
+    status: 'Active',
   },
   {
     _id: '5a566402f90ae30e97f990db',
@@ -60,7 +60,7 @@ const CASES = [
     name: 'Holder Bean',
     age: 82,
     phone: '+1 (989) 503-2663',
-    status: 'critical ',
+    status: 'Active',
   },
   {
     _id: '5a566402e3b846c5f6aec652',
