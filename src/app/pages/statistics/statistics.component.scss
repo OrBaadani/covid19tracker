@@ -55,7 +55,7 @@
   }
   .country-data {
     margin-left: 20px;
-    // padding-bottom: 20px;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -63,15 +63,17 @@
     @media (max-width: 1050px) {
       margin-left: 0px;
     }
-    .country-data-container {
-      display: flex;
+    section {
       flex-grow: 1;
-      gap: 20px;
-      @media (max-width: 450px) {
-        gap: 5px;
-      }
-      div {
-        @extend %box-shared;
+      .country-data-container {
+        display: flex;
+        gap: 20px;
+        @media (max-width: 450px) {
+          gap: 5px;
+        }
+        div {
+          @extend %box-shared;
+        }
       }
     }
   }
